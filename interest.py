@@ -1,10 +1,7 @@
-import math
-
 # Prompt the user for an Initial Balance (and save to a variable)
-init_balance = input("Initial balance:")
-
 # use the float() function to convert the input into a number.
-float(init_balance)
+init_balance = float(input("Initial balance:"))
+
 
 
 # Prompt the user for an Annual Interest % (and save to a variable)
@@ -25,14 +22,13 @@ no_years = int(input("Number of years:"))
 # Calculate the total value following the formula.
 # You can use multiple steps and variables if necessary.
 # Note that n = 12
-total_earnings_and_value = init_balance*(1+(annual_interest/12)**(12*no_years))
+total_earnings_and_value = init_balance*(1+(annual_interest/12))**(12*no_years)
 
 # Calculate the interest earned based on the above value and the initial balance
 interest_earned = total_earnings_and_value - init_balance
 
 # Output the interest earned
-print ("Interest earned in "+str(no_years)+" years: $"+str(interest_earned))
-
+print("Interest earned in "+str(no_years)+" years: $"+str(interest_earned))
 
 # Output the total value
-#print str(total_earnings_and_value)
+print("Total value after "+str(no_years)+" years: $"+str(total_earnings_and_value))
